@@ -13,6 +13,12 @@ Clone repo.
 make install
 ```
 
+You can also install it to a custom path of your choosing:
+
+```bash
+make install INSTALLPATH="/bin"
+```
+
 If you wanna get rid of it:
 
 ```bash
