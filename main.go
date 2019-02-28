@@ -20,7 +20,8 @@ func main() {
 	flag.Parse()
 
 	if *inf == "" {
-		fmt.Printf("nplcsv: Please provide an input file with the flag -i.\n")
+		fmt.Printf("nplcsv: Please provide an input file.\nUsage:\n")
+		flag.PrintDefaults()
 		os.Exit(1)
 	}
 
