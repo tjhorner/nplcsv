@@ -1,7 +1,7 @@
 .PHONY: dist dist-win dist-macos dist-linux ensure-dist-dir build install uninstall
 
 GOBUILD=go build -ldflags="-s -w"
-INSTALLPATH=/usr/local/bin/nplcsv
+INSTALLPATH=/usr/local/bin
 
 ensure-dist-dir:
 	@- mkdir -p dist
@@ -26,9 +26,9 @@ build:
 	@- chmod +x bin/nplcsv
 
 install: build
-	mv bin/nplcsv $(INSTALLPATH)
+	mv bin/nplcsv $(INSTALLPATH)/nplcsv
 	@- rm -rf bin
-	@echo "nplcsv was installed to $(INSTALLPATH). Run make uninstall to get rid of it, or just remove the binary yourself."
+	@echo "nplcsv was installed to $(INSTALLPATH)/nplcsv. Run make uninstall to get rid of it, or just remove the binary yourself."
 
 uninstall:
-	rm $(INSTALLPATH)
+	rm $(INSTALLPATH)/nplcsv
