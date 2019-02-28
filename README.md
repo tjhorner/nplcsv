@@ -2,11 +2,40 @@
 
 A tool that converts the format that [Now Playing Log](https://play.google.com/store/apps/details?id=com.radix.nowplayinglog) spits out (why??) into a CSV.
 
-## Building it
+## Installing
+
+**(Prebuilt binaries available from [releases](https://github.com/tjhorner/nplcsv/releases).)**
+
+Clone repo.
+
+```bash
+# Build nplcsv then install it to /usr/local/bin
+make install
+```
+
+If you wanna get rid of it:
+
+```bash
+make uninstall
+```
+
+## Building
 
 First, install Go.
 
 Then just:
+
+```bash
+make build
+```
+
+`bin/nplcsv` will magically appear. You can also just:
+
+```bash
+go run main.go
+```
+
+To distribute:
 
 ```bash
 make dist
